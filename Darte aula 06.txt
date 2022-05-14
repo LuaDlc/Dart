@@ -1,0 +1,26 @@
+14/05
+void main() {
+  
+  //orientação a objetos
+  Carro mercedes = Carro("mercedes");
+  Carro gol = Carro("gol");
+  
+  }
+  //classes
+  //FORA DA MAIN
+  class Carro {
+    //aqui faço o encapsulamento
+    final String modelo;
+    //crio uma var privada q nao pode ser acessada por outras classes
+    String _segredo = 'Muito Dinheiro';
+    //outra var privada, mas pode ser acessada por objetos da classe
+    int _valor = 1000;
+    //p/ permitir a visualização dessa privada sem alteração
+    int get valorDoCarro => _valor;
+    //p/ permitir  a alteraçaõ desse valor da privada
+    //crio um método->recebe um inteiro->ad a var privada->atribuo uma novo valor
+    void setValue(int valor) => _valor = valor;
+    Carro(this.modelo);
+      
+    
+  }
