@@ -1,0 +1,95 @@
+void main() {
+  
+  
+   //Abstraçoes(contratos) A classe deve seguir o 
+  //contrato
+  
+  //imagina q a pessoa tenha funcoes, por ex se comunicar
+  abstract class Pessoa {
+    //atribuo essa funcao
+    String comunicar();
+  }
+  
+  class PessoaEt implements Pessoa {
+    //nessa classe, a pessoaet implementa uma codificaçao,oq sera comunicado
+    String comunicar() {
+      return "Olá, Mundo";
+    }
+  }
+  
+  class PessoaNaoEt implements Pessoa {
+    String comunicar() {
+      return "BOm dia";
+    }
+  }
+      
+    
+  }
+
+     ===========================================
+                   //////HERANÇA\\\\\\\\
+void main() {
+  
+  
+   
+Deivid deivid = Deivid();
+  deivid.falar();
+  
+  }
+
+
+//vc herda do pai alguma coisa
+class Pai() {
+  String falar() {
+    //no retorno contem oq eu herdo da classe pai
+  return "girias"
+  }
+ 
+}
+  
+//aqui diz que a class deivid herda da class Pai
+class Deivid extends Pai {
+  
+}
+
+
+
+============================================================
+    ///////POLIMORFISMO\\\\\\\
+
+void main() {
+  
+  //aqui eu chamo o abstract e sua classe boleto
+   Pagamento pagamento = PagarComBoleto();
+  //aqui chamo o retorno q tem a strng
+  pagamento.pagar();
+  
+  pagamento = PagarComPix();
+  pagamento.pagar();
+  
+}
+  
+//POLIMORFISMO
+
+//se eu tenho um sistema de pagamentos, por ex
+abstract class Pagamento {
+  //ele recebe pagamentos
+  void pagar();
+}
+//esse sistema pode ter classes de tipos de pagamentos
+//q são implementados
+class PagarComBoleto implements Pagamento {
+  
+  //sempre chamando esse metodo de pagar
+  void pagar() {
+    print("Pagar com Boleto");
+    
+  }
+  
+}
+
+class PagarComPix implements Pagamento {
+  void pagar() {
+    print("Pagar com Pix");
+  }
+}
