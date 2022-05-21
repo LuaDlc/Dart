@@ -1,0 +1,25 @@
+void main()async {
+  
+    //future, Async e Wait
+  
+  String nome = 'Deivid';
+  Future<String> cepFuture = getCepByName("Rua JK");
+  //esse objeto é uma future do tipo string
+  late String cep;
+  //late pois vais er inicializada em algum momento
+  
+  
+  //away segura a requisição e aguarda o resultado,
+  //e ai dá
+  //o cep o valor da future
+  cep = await cepFuture;
+  
+  print(cep);
+  
+}
+//exernal service; esse é o retorno da funcao
+Future<String> getCepByName(String name) {
+  //simulando requisição
+  return Future.value('21548468');
+  //retorna o valor da future a um api externa
+}
