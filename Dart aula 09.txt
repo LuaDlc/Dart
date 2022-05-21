@@ -1,0 +1,67 @@
+void main()async {
+  
+    //mapas
+  
+  //isso é uma lista
+  
+  List<String> lista = ['Deivid', 'Willyan'];
+  
+  print(lista[0]);
+  
+  //mapas
+  //ao inves de index, temos as chaves
+  
+  //chave, valor
+  Map<String, String> mapa = {'chave': 'valor'};
+  
+  //mostra só o valor da chave
+  print(mapa['chave']);
+  
+  //aDICIONANDO VALORES DENTRO DO MAPA
+  
+  //1 método put com dois parametros 
+  //e uma funcao " ()=>" com os nomes da chave e valor
+  //pra serem adicionados
+  
+  mapa.putIfAbsent('novaChave', () => 'novoValor');
+  print(mapa);
+  
+  //2- Declarando uma chave e atribuindo valor
+  
+  mapa['novaChaveDois'] = 'novoValorDois';
+  print(mapa);
+  
+  
+  //REMOVENDO VALORES DO MAPA
+  
+  //1 com REMOVE
+  //vai remover o valor pela chave
+  mapa.remove('chave');
+  print(mapa);
+  
+  
+  //ALTERANDO O VALOR DE UMA CHAVE
+  //1 Chamando o mapa com o novo valor
+  
+  mapa['novaChaveDois'] = 'atualizado';
+  print(mapa);
+  
+  //2- usando o UPDATE
+  //com 2 paramtetros e uma funcao
+  mapa.update('novaChaveDois', (value) => 'atualizado2');
+  print(mapa);
+  
+  
+  //ITERAR SOBRE UM MAPA
+  
+  mapa.forEach((chave, valor) => print('a chave eh: $chave, o valor eh: $valor'));
+  
+  
+  //a partir das chaves
+  
+  //printa as chaves
+  mapa.keys.forEach(print);
+  
+  //printa os valores
+  mapa.values.forEach(print);
+}
