@@ -1,0 +1,49 @@
+//JSON É UM TIPO DE OBJETO QUE VAMOS TRAFEGAR  TODA VEZ QUE
+// CONSUMIR UMA API
+//É UM ASTRING
+//É NECESSÁRIO FAZER O IMPORT
+import 'dart:convert';
+
+void main() {
+  //USAE-SE ASPAS SIMPLES PRA DIZER QUE É UMA STRING
+  //DE MULTIPLAS LINHAS
+  //POSSO TER UM MAPA DENTRO DO JSON
+  String json = ''' {
+      "usuario": "deivid@gmail",
+      "senha": 123456,
+      "permissoes": [
+      "owner", "admin"
+      ]
+  }
+  ''';
+  
+  //ESSE EXEMPLO MOSTRA COMO PRINTAR UM JSON
+  //E PRINTAR UM VALOR DESSE MAPA
+  print(json);
+  Map resultJson = jsonDecode(json);
+  print(resultJson['permissoes'][0]);
+}
+
+/////////////////////////////////////////////////
+
+
+//pra converter preciso de um import
+import 'dart:convert';
+
+void main() {
+  //trabalhando com json
+  //convertendo um objeto em json
+  
+  //neste caso esse map(q é um objeto)
+  Map mapa = {
+    'nome' : 'deivid',
+    'pass' : 123,
+    'permissoes' : ['owner', 'admin']
+  };
+  
+  
+  //passo um mapa que me retorna um result
+  //e depois é só printar
+  var result = jsonEncode(mapa);
+  print(result);
+}
