@@ -1,0 +1,15 @@
+//Calleble interface
+//para melhorar a semântica do código
+
+void main() {
+  // instancia  nome da instancia  objeto
+  BuscarAlunos buscarAlunos = BuscarAlunos();
+  //executando e omitindo a call
+  buscarAlunos();
+  
+}
+
+//essa call tem um unico método q pode ser omitido
+  class BuscarAlunos {
+    void call() => print('deivid, luana, pedro');
+  }
